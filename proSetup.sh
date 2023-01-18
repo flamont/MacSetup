@@ -68,8 +68,6 @@ cecho "###############################################" $red
 cecho "###############################################" $red
 echo "Brew cask"
 #dev + env
-brew cask install iterm2
-brew cask install docker
 brew install git  
 brew install zsh
 brew install python3
@@ -79,11 +77,45 @@ brew install yarn
 brew install pnpm
 brew install rename
 
+brew cask install iterm2
+brew cask install docker
 brew cask install visual-studio-code
+brew install --cask sublime-text
+brew install --cask rstudio
+brew install --cask processing
+brew install --cask anaconda
+brew install --cask runjs
+
+brew install --cask sourcetree
+brew install --cask github
+brew install --cask mysqlworkbench
 brew cask install notion
+brew cask install slack
+brew install --cask discord
 brew cask install google-chrome
 brew install firefox
-brew cask install slack
+brew install --cask microsoft-edge
+brew install --cask qgis
+brew install --cask spotify
+brew install --cask xcodes
+brew install --cask betterdisplay
+brew install --cask colour-contrast-analyser
+
+brew install --cask blender
+brew install --cask figma
+brew install --cask adobe-creative-cloud
+
+
+#manual
+#mozillaDev
+#DisplayLinkManager
+#adobe
+#photoshop
+#Illustrator
+#Dimension
+#indesign
+#AE
+#Acrobat
 
 #clean old version
 brew cleanup
@@ -201,7 +233,6 @@ if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
   defaults write com.apple.finder AppleShowAllFiles TRUE
 fi
 
-
 echo ""
 echo "Show all filename extensions in Finder by default? (y/n)"
 read -r response
@@ -213,7 +244,6 @@ echo ""
 echo "Setting the icon size of Dock items to 36 pixels for optimal size/screen-realestate"
 defaults write com.apple.dock tilesize -int 36
 
-
 echo ""
 echo "Disable local Time Machine backups? (This can take up a ton of SSD space on <128GB SSDs) (y/n)"
 read -r response
@@ -221,40 +251,8 @@ if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
   hash tmutil &> /dev/null && sudo tmutil disablelocal
 fi
 
-
-
-
 cecho "###############################################" $red
 
-
-
-#sublime
-#qgis
-#rstudio
-#blender
-#figma
-#mozillaDev
-#edge
-#processing
-#sourcetree
-#Runjs
-#spotify
-#githubDesktop
-#colourcontrastanalyser
-#sqlworkbench
-#discord
-#xcode
-#betterdisplay
-#DisplayLinkManager
-
-
-#adobe
-#photoshop
-#Illustrator
-#Dimension
-#indesign
-#AE
-#Acrobat
 
 #npm package
 cecho "###############################################" $red
@@ -263,8 +261,6 @@ npm install -g prettier
 npm install -g eslint
 
 cecho "###############################################" $red
-
-
 
 
 ###############################################################################
