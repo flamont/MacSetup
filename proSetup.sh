@@ -6,10 +6,12 @@ echo "by @FLD"
 echo "https://francis-lamontagne.com"
 
 #-----------
-#Based on nnj / new-computer repo (https://github.com/nnja/new-computer/blob/master/setup.sh)
+#Based on 
+# nnj (https://github.com/nnja/new-computer/blob/master/setup.sh)
+# ruyadorno (https://github.com/ruyadorno/installme-osx/)
+# millermedeiros (https://gist.github.com/millermedeiros/6615994)
+# brandonb927 (https://gist.github.com/brandonb927/3195465/)
 #----------- 
-
-# Colorize
 
 # Set the colours you can use
 black=$(tput setaf 0)
@@ -45,18 +47,15 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 cecho "###############################################" $red
 
-
-
 #install Brew
 cecho "###############################################" $red
 
 echo "Install Homebrew"
 if test ! $(which brew)
 then
-	## Don't prompt for confirmation when installing homebrew
+## Don't prompt for confirmation when installing homebrew
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
 fi
-
 #manage brew
 brew upgrade
 brew update
@@ -67,9 +66,7 @@ cecho "###############################################" $red
 
 #Cask
 cecho "###############################################" $red
-
 echo "Brew cask"
-
 #dev + env
 brew cask install iterm2
 brew cask install docker
@@ -87,7 +84,6 @@ brew cask install notion
 brew cask install google-chrome
 brew install firefox
 brew cask install slack
-
 
 #clean old version
 brew cleanup
@@ -184,7 +180,6 @@ if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
   echo "and make sure it can't be rewritten"
   sudo chflags uchg /Private/var/vm/sleepimage
 fi
-
 
 echo "Disable display from automatically adjusting brightness? (y/n)"
 read -r response
