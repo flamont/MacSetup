@@ -7,7 +7,6 @@ echo "https://francis-lamontagne.com"
 
 #-----------
 #Based on nnj / new-computer repo (https://github.com/nnja/new-computer/blob/master/setup.sh)
-#based on XX
 #----------- 
 
 # Colorize
