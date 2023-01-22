@@ -86,16 +86,22 @@ brew install --cask processing
 brew install --cask anaconda
 brew install --cask runjs
 brew install --cask cakebrew
+brew install --cask cyberduck
+brew install --cask filezilla
 
 brew install --cask sourcetree
 brew install --cask github
 brew install --cask mysqlworkbench
+brew install --cask dbschema
+brew install --cask postman
+
 brew cask install notion
 brew cask install slack
 brew install --cask discord
 brew cask install google-chrome
 brew install firefox
 brew install --cask microsoft-edge
+brew install --cask opera
 brew install --cask qgis
 brew install --cask spotify
 brew install --cask xcodes
@@ -106,17 +112,25 @@ brew install --cask blender
 brew install --cask figma
 brew install --cask adobe-creative-cloud
 
+brew install --cask screaming-frog-seo-spider
+
+brew install --cask ultimaker-cura
+brew install --cask arduino
+brew install --cask autodesk-fusion360
+brew install --cask creality-slicer
+brew install --cask raspberry-pi-imager
+brew install --cask utm
+
 
 #manual
+#------
 #mozillaDev
 #DisplayLinkManager
-#adobe
 #photoshop
 #Illustrator
-#Dimension
 #indesign
-#AE
 #Acrobat
+#trello
 
 #clean old version
 brew cleanup
