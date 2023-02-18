@@ -176,9 +176,6 @@ defaults write com.apple.screencapture type -string "png"
 # Use plain text mode for new TextEdit documents
 defaults write com.apple.TextEdit RichText -int 0
 
-# Stop iTunes from responding to the keyboard media keys
-launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
-
 # Enable the automatic update check
 defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
 
@@ -260,6 +257,15 @@ cecho "###############################################" $red
 
 npm install -g prettier
 npm install -g eslint
+
+cecho "###############################################" $red
+
+
+#pip
+cecho "###############################################" $red
+
+echo "Python package"
+ #conda install -c conda-forge geopandas
 
 cecho "###############################################" $red
 
