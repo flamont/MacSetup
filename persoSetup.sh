@@ -275,6 +275,9 @@ cecho "###############################################" $red
 npm install -g prettier
 npm install -g eslint
 
+#vscodeExtension
+
+
 cecho "###############################################" $red
 
 
