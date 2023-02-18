@@ -121,6 +121,10 @@ brew install --cask creality-slicer
 brew install --cask raspberry-pi-imager
 brew install --cask utm
 
+#geo
+brew install gdal
+brew install geos
+brew install spatialindex
 
 #manual
 #------
@@ -274,9 +278,20 @@ npm install -g eslint
 
 #vscodeExtension
 
-
+#pip
 cecho "###############################################" $red
 
+echo 'python3'
+
+pip3 install pillow
+pip3 install pysal
+pip3 install  geopandas
+pip install matplotlib #or. **pip install matplotlib** 
+pip3 install  rtree
+pip3 install ogr
+pip3 install descartes
+pip3 install geopy
+pip3 install basemap
 
 ###############################################################################
 # Chrome, Safari, & WebKit

@@ -106,6 +106,10 @@ brew install --cask blender
 brew install --cask figma
 brew install --cask adobe-creative-cloud
 
+#geo
+brew install gdal
+brew install geos
+brew install spatialindex
 
 #manual
 #mozillaDev
@@ -265,6 +269,17 @@ cecho "###############################################" $red
 cecho "###############################################" $red
 
 echo "Python package"
+
+pip3 install pillow
+pip3 install pysal
+pip3 install  geopandas
+pip install matplotlib #or. **pip install matplotlib** 
+pip3 install  rtree
+pip3 install ogr
+pip3 install descartes
+pip3 install geopy
+pip3 install basemap
+
  #conda install -c conda-forge geopandas
 
 cecho "###############################################" $red
