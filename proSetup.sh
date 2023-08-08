@@ -27,10 +27,10 @@ white=$(tput setaf 7)
 #reset=`tput sgr0`
 
 #run alert
-cecho "###############################################" $red
+echo "###############################################" $red
 
-cecho "Are you sure you want to run this script?" $magenta
-cecho "understood that it will make changes to your computer? (y/n)" $red
+echo "Are you sure you want to run this script?" $magenta
+echo "understood that it will make changes to your computer? (y/n)" $red
 read -r response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
   CONTINUE=true
@@ -38,17 +38,17 @@ fi
 
 if ! $CONTINUE; then
   # Check if we're continuing and output a message if not
-  cecho "Please go read the script, it only takes a few minutes" $red
+  echo "Please go read the script, it only takes a few minutes" $red
   exit
 fi
 
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-cecho "###############################################" $red
+echo "###############################################" $red
 
 #install Brew
-cecho "###############################################" $red
+echo "###############################################" $red
 
 echo "Install Homebrew"
 if test ! $(which brew)
@@ -61,11 +61,11 @@ brew upgrade
 brew update
 brew tap caskroom/cask
 
-cecho "###############################################" $red
+echo "###############################################" $red
 
 
 #Cask
-cecho "###############################################" $red
+echo "###############################################" $red
 echo "Brew cask"
 #dev + env
 brew install git  
@@ -83,7 +83,7 @@ brew cask install visual-studio-code
 brew install --cask sublime-text
 brew install --cask rstudio
 brew install --cask processing
-brew install --cask anaconda
+#brew install --cask anaconda
 brew install --cask runjs
 brew install --cask cakebrew
 
@@ -125,11 +125,11 @@ brew install spatialindex
 #clean old version
 brew cleanup
 
-cecho "###############################################" $red
+echo "###############################################" $red
 
 
 #Install from appstore
-cecho "###############################################" $red
+echo "###############################################" $red
 
 echo "Install apps from app store"
 
@@ -139,7 +139,7 @@ echo "Install apps from app store"
 # ### Mas login is currently broken on mojave. See:
 # ### Login manually for now.
 
-# cecho "Need to log in to App Store manually to install apps with mas...." $red
+# echo "Need to log in to App Store manually to install apps with mas...." $red
 # echo "Opening App Store. Please login."
 # open "/Applications/App Store.app"
 # echo "Is app store login complete.(y/n)? "
@@ -152,15 +152,15 @@ echo "Install apps from app store"
 # 	mas install 1351639930 # Gifski, convert videos to gifs
 # 	mas install 414030210  # Limechat, IRC app.
 # else
-# 	cecho "App Store login not complete. Skipping installing App Store Apps" $red
+# 	echo "App Store login not complete. Skipping installing App Store Apps" $red
 # fi
 
-cecho "###############################################" $red
+echo "###############################################" $red
 
 
 
 #SystemSetup
-cecho "###############################################" $red
+echo "###############################################" $red
 
 #AutoHide Dock
 defaults write com.apple.dock autohide -bool true
@@ -253,36 +253,37 @@ if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
   hash tmutil &> /dev/null && sudo tmutil disablelocal
 fi
 
-cecho "###############################################" $red
+echo "###############################################" $red
 
 
 #npm package
-cecho "###############################################" $red
+echo "###############################################" $red
 
 npm install -g prettier
 npm install -g eslint
 
-cecho "###############################################" $red
+echo "###############################################" $red
 
 
 #pip
-cecho "###############################################" $red
+echo "###############################################" $red
 
 echo "Python package"
 
 pip3 install pillow
 pip3 install pysal
-pip3 install  geopandas
-pip install matplotlib #or. **pip install matplotlib** 
-pip3 install  rtree
+pip3 install pandas
+pip3 install geopandas
+pip3 install matplotlib 
+pip3 install rtree
 pip3 install ogr
 pip3 install descartes
 pip3 install geopy
-pip3 install basemap
+pip install basemap
 
  #conda install -c conda-forge geopandas
 
-cecho "###############################################" $red
+echo "###############################################" $red
 
 
 ###############################################################################
@@ -310,13 +311,13 @@ defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.Web
 #End Section
 
 echo ""
-cecho "Done!" $cyan
+echo "Done!" $cyan
 echo ""
 echo ""
-cecho "################################################################################" $white
+echo "################################################################################" $white
 echo ""
 echo ""
-cecho "Note that some of these changes require a logout/restart to take effect." $red
+echo "Note that some of these changes require a logout/restart to take effect." $red
 echo ""
 echo ""
 echo -n "Check for and install available OSX updates, install, and automatically restart? (y/n)? "
