@@ -54,20 +54,20 @@ echo "Install Homebrew"
 if test ! $(which brew)
 then
 ## Don't prompt for confirmation when installing homebrew
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 #manage brew
 brew upgrade
 brew update
-brew tap caskroom/cask
+#brew tap caskroom/cask
 
 echo "###############################################" $red
 
 
 #Cask
 echo "###############################################" $red
-echo "Brew cask"
 #dev + env
+echo "Brew cask"
 brew install git  
 brew install zsh
 brew install python3
@@ -76,55 +76,55 @@ brew install node
 brew install yarn
 brew install pnpm
 brew install rename
-
-brew cask install iterm2
-brew cask install docker
-brew cask install visual-studio-code
-brew install --cask sublime-text
-brew install --cask rstudio
-brew install --cask processing
-brew install --cask anaconda
-brew install --cask runjs
-brew install --cask cakebrew
-brew install --cask cyberduck
-brew install --cask filezilla
-
-brew install --cask sourcetree
-brew install --cask github
-brew install --cask mysqlworkbench
-brew install --cask dbschema
-brew install --cask postman
-
-brew cask install notion
-brew cask install slack
-brew install --cask discord
-brew cask install google-chrome
+brew install iterm2
+brew install docker
+brew install visual-studio-code
+brew install sublime-text
+brew install rstudio
+brew install processing
+brew install anaconda
+brew install runjs
+brew install cakebrew
+brew install cyberduck
+brew install filezilla
+brew install sourcetree
+brew install github
+brew install mysqlworkbench
+brew install dbschema
+brew install postman
+brew install notion
+brew install slack
+brew install discord
+brew install google-chrome
 brew install firefox
-brew install --cask microsoft-edge
-brew install --cask opera
-brew install --cask qgis
-brew install --cask spotify
-brew install --cask xcodes
-brew install --cask betterdisplay
-brew install --cask colour-contrast-analyser
-
-brew install --cask blender
-brew install --cask figma
-brew install --cask adobe-creative-cloud
-
-brew install --cask screaming-frog-seo-spider
-
-brew install --cask ultimaker-cura
-brew install --cask arduino
-brew install --cask autodesk-fusion360
-brew install --cask creality-slicer
-brew install --cask raspberry-pi-imager
-brew install --cask utm
+brew install microsoft-edge
+brew install opera
+brew install qgis
+brew install spotify
+brew install xcodes
+brew install betterdisplay
+brew install colour-contrast-analyser
+brew install blender
+brew install figma
+brew install adobe-creative-cloud
+brew install screaming-frog-seo-spider
+brew install ultimaker-cura
+brew install arduino
+brew install autodesk-fusion360
+brew install creality-slicer
+brew install raspberry-pi-imager
+brew install utm
+brew tap oven-sh/bun
+brew install bun
 
 #geo
 brew install gdal
 brew install geos
 brew install spatialindex
+
+#oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 
 #manual
 #------

@@ -76,35 +76,32 @@ brew install node
 brew install yarn
 brew install pnpm
 brew install rename
-
-brew cask install iterm2
-brew cask install docker
-brew cask install visual-studio-code
-brew install --cask sublime-text
-brew install --cask rstudio
-brew install --cask processing
-#brew install --cask anaconda
-brew install --cask runjs
-brew install --cask cakebrew
-
-brew install --cask sourcetree
-brew install --cask github
-brew install --cask mysqlworkbench
-brew cask install notion
-brew cask install slack
-brew install --cask discord
+brew install iterm2
+brew install docker
+brew install visual-studio-code
+brew install sublime-text
+brew install rstudio
+brew install processing
+brew install  anaconda
+brew install runjs
+brew install cakebrew
+brew install sourcetree
+brew install github
+brew install mysqlworkbench
+brew install notion
+brew install slack
+brew install discord
 brew cask install google-chrome
 brew install firefox
-brew install --cask microsoft-edge
-brew install --cask qgis
-brew install --cask spotify
-brew install --cask xcodes
-brew install --cask betterdisplay
-brew install --cask colour-contrast-analyser
-
-brew install --cask blender
-brew install --cask figma
-brew install --cask adobe-creative-cloud
+brew install microsoft-edge
+brew install qgis
+brew install spotify
+brew install xcodes
+brew install betterdisplay
+brew install colour-contrast-analyser
+brew install blender
+brew install figma
+brew install adobe-creative-cloud
 
 #geo
 brew install gdal
